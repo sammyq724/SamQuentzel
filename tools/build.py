@@ -39,7 +39,6 @@ NAV = [
     ("podcast.html", "Podcast"),
     ("interviews.html", "Interviews"),
     ("brand.html", "Brand Guide"),
-    ("portfolio-index.html", "Index"),
 ]
 
 # Word-count limits from the assignment, checked on every build.
@@ -51,9 +50,6 @@ LIMITS = {
     "story4": (100, 150),
     "thought": (200, 300),
 }
-
-# Changes whenever the stylesheet changes, so browsers never pair new pages with old styles.
-CSS_VERSION = hashlib.sha1((ROOT / "assets/css/site.css").read_bytes()).hexdigest()[:10]
 
 ICON_DOWNLOAD = (
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
@@ -93,6 +89,22 @@ class WordCounter(HTMLParser):
         return {k: len(re.findall(r"\S+", " ".join(v))) for k, v in self.text.items()}
 
 
+def version_assets(page: str) -> str:
+    """Add ?v=<content hash> to every local asset link.
+
+    The link changes whenever the file changes, so a browser can never show
+    an old stylesheet, image, or resume PDF alongside a new page.
+    """
+    def stamp(match: re.Match) -> str:
+        path = match.group(0)
+        file = ROOT / path
+        if not file.is_file():
+            return path
+        return f"{path}?v={hashlib.sha1(file.read_bytes()).hexdigest()[:10]}"
+
+    return re.sub(r"assets/[A-Za-z0-9_./-]+\.(?:css|png|jpg|webp|svg|pdf|woff2)(?![?\w])", stamp, page)
+
+
 def curl_apostrophes(markup: str) -> str:
     """Turn straight apostrophes in visible text into typographic ones."""
     parts = re.split(r"(<!--.*?-->|<[^>]+>)", markup, flags=re.S)
@@ -126,7 +138,7 @@ def layout(file: str, meta: dict, body: str) -> str:
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css?v={CSS_VERSION}">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -221,7 +233,7 @@ def main() -> int:
             print(f"!! {src.name}: unresolved tokens {left}")
             ok = False
 
-        (ROOT / src.name).write_text(layout(src.name, meta, body), encoding="utf-8")
+        (ROOT / src.name).write_text(version_assets(layout(src.name, meta, body)), encoding="utf-8")
         print(f"built {src.name}")
     return 0 if ok else 1
 

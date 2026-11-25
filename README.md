@@ -25,7 +25,7 @@ A static website for MGT 2010 Management Communication. No frameworks and no bui
 | Podcast Thought Piece | `podcast.html` | 25 |
 | **Total** | | **100** |
 
-`portfolio-index.html` shows this same table on the site.
+The same table is in `submission/Portfolio-Submission.docx`, which is what gets handed in with the link.
 
 ## Still to add
 

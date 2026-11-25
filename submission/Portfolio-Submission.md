@@ -7,8 +7,6 @@ subtitle: "Samuel Quentzel · MGT 2010 Management Communication"
 
 **<https://sammyq724.github.io/SamQuentzel/>**
 
-The same list of pieces and point values is published on the site: <https://sammyq724.github.io/SamQuentzel/portfolio-index.html>
-
 ## Included pieces and point values
 
 | Element | What I included | Where to find it | Points |

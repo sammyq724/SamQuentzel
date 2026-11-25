@@ -272,7 +272,7 @@ main { display: block; }
 
 /* ---------- STAR stories ---------- */
 
-.story { max-width: 50rem; margin-inline: auto; padding-block: clamp(36px, 5vw, 60px); border-top: 1px solid var(--line-strong); }
+.story { max-width: 59rem; margin-inline: auto; padding-block: clamp(36px, 5vw, 60px); border-top: 1px solid var(--line-strong); }
 .story:first-of-type { border-top: 0; padding-top: clamp(8px, 2vw, 20px); }
 .story-num { display: block; text-align: center; font-family: var(--font-mono); font-weight: 500; font-size: 0.85rem; letter-spacing: 0.16em; color: var(--brass-deep); margin: 0 0 12px; }
 .story h2 { text-align: center; font-size: clamp(1.45rem, 2.8vw, 1.9rem); margin: 0 auto 28px; max-width: 30rem; }
