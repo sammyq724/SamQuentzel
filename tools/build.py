@@ -39,6 +39,7 @@ NAV = [
     ("interviews.html", "Interviews"),
     ("projects.html", "Projects"),
     ("brand.html", "Brand Guide"),
+    ("portfolio-index.html", "Index"),
 ]
 
 # Word-count limits from the assignment, checked on every build.
@@ -89,6 +90,14 @@ class WordCounter(HTMLParser):
         return {k: len(re.findall(r"\S+", " ".join(v))) for k, v in self.text.items()}
 
 
+def curl_apostrophes(markup: str) -> str:
+    """Turn straight apostrophes in visible text into typographic ones."""
+    parts = re.split(r"(<!--.*?-->|<[^>]+>)", markup, flags=re.S)
+    for i in range(0, len(parts), 2):  # even items are text between tags
+        parts[i] = re.sub(r"(?<=\w)'", "\u2019", parts[i])
+    return "".join(parts)
+
+
 def layout(file: str, meta: dict, body: str) -> str:
     title = meta["title"]
     full_title = f"{title} | {SITE['name']}" if file != "index.html" else f"{SITE['name']} | Digital Career Portfolio"
@@ -124,7 +133,7 @@ def layout(file: str, meta: dict, body: str) -> str:
         <span class="plate" aria-hidden="true">SQ</span>
         <span class="brand-text"><strong>{SITE['name']}</strong><small>{SITE['tagline']}</small></span>
       </a>
-      <a class="btn btn-outline" href="{SITE['resume']}" download>{ICON_DOWNLOAD}Download resume</a>
+      <a class="btn btn-outline" href="{SITE['resume']}" download aria-label="Download resume">{ICON_DOWNLOAD}<span>Download<span class="hide-xs"> resume</span></span></a>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="wrap">
@@ -146,7 +155,7 @@ def layout(file: str, meta: dict, body: str) -> str:
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>{SITE['name']}</strong><small>{SITE['tagline']}</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. Building AI for businesses that have run the same way for decades.</p>
+        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
@@ -159,17 +168,28 @@ def layout(file: str, meta: dict, body: str) -> str:
       <div>
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="portfolio-index.html">Portfolio index and points</a></li>
+          <li><a href="portfolio-index.html">Portfolio index</a></li>
           <li><a href="brand.html">Brand style guide</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
-    <div class="wrap colophon">
-      <span>&copy; 2026 {SITE['name']}</span>
-      <span>Digital Career Portfolio · MGT 2010 Management Communication</span>
+    <div class="wrap">
+      <div class="colophon">
+        <span>&copy; 2026 {SITE['name']}</span>
+        <span>Digital Career Portfolio</span>
+      </div>
     </div>
   </footer>
+  <script>
+    (function () {{
+      var here = document.querySelector('.site-nav [aria-current="page"]');
+      var list = document.querySelector('.site-nav ul');
+      if (here && list && list.scrollWidth > list.clientWidth) {{
+        list.scrollLeft = here.offsetLeft - (list.clientWidth - here.offsetWidth) / 2;
+      }}
+    }})();
+  </script>
 </body>
 </html>
 """
@@ -200,6 +220,7 @@ def main() -> int:
         for token, value in (("{{email}}", SITE["email"]), ("{{linkedin}}", SITE["linkedin"]),
                              ("{{resume}}", SITE["resume"]), ("{{download_icon}}", ICON_DOWNLOAD)):
             body = body.replace(token, value)
+        body = curl_apostrophes(body)
         left = re.findall(r"\{\{[^}]+\}\}", body)
         if left:
             print(f"!! {src.name}: unresolved tokens {left}")

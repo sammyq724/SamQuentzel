@@ -24,7 +24,7 @@
         <span class="plate" aria-hidden="true">SQ</span>
         <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
       </a>
-      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>Download resume</a>
+      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download aria-label="Download resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg><span>Download<span class="hide-xs"> resume</span></span></a>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="wrap">
@@ -38,6 +38,7 @@
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="projects.html" aria-current="page">Projects</a></li>
           <li><a href="brand.html">Brand Guide</a></li>
+          <li><a href="portfolio-index.html">Index</a></li>
         </ul>
       </div>
     </nav>
@@ -46,8 +47,8 @@
   <main id="main">
 <div class="wrap page-head">
   <p class="eyebrow">Projects</p>
-  <h1>Things I've built and pitched</h1>
-  <p class="lead">Three projects, in the order I would talk about them: an AI system running inside a real business, a case competition final and an iOS game.</p>
+  <h1>Things I’ve built and pitched</h1>
+  <p class="lead">Three projects, in the order I would talk about them: an AI system running inside a real business, a case competition final, and an iOS game.</p>
 </div>
 
 <div class="wrap">
@@ -60,17 +61,17 @@
     </div>
     <div class="project-main">
       <h2>AI Prediction Model for Plumbing Supplies</h2>
-      <p>A contractor emails &ldquo;Can I please get a price for 5 - 3 inch brass elbows?&rdquo; Someone at the counter has to know which of 20,000 catalog items that means. I built a system that does it automatically for my father's wholesale plumbing supply company.</p>
+      <p>A contractor emails &ldquo;Can I please get a price for 5 - 3 inch brass elbows?&rdquo; Someone on the inside sales team has to know which of more than 20,000 catalog items that means. I built a system that does it automatically for my father’s wholesale plumbing supply company.</p>
       <div class="facts">
         <div><b>90%</b><span>accuracy across more than 10,000 test predictions</span></div>
         <div><b>115+</b><span>purchase emails routed through the pipeline every day</span></div>
         <div><b>~20 hrs</b><span>saved for the sales team each week</span></div>
       </div>
       <ul class="bullets">
-        <li>Engineered an AI-driven matching system that interprets quote and purchase order requests, regardless of slang, phrasing or formatting, and maps each line item to the correct SKU in the company's ERP system.</li>
+        <li>Engineered an AI-driven matching system that interprets quote and purchase order requests, regardless of slang, phrasing, or formatting, and maps each line item to the correct SKU in the company’s ERP system.</li>
         <li>Built the automated intake pipeline with Make.com and Render.</li>
         <li>Architected the full AI stack: Claude Sonnet 5 for document and image parsing and core reasoning, DeepSeek V4-Pro for relevance filtering, and Fable 5.1 with Opus 5 for model development and software engineering.</li>
-        <li>Pitched the product at IdeaBounce, a two-minute pitch competition hosted by WashU's Skandalaris Center, and won.</li>
+        <li>Pitched the product at IdeaBounce, a two-minute pitch competition hosted by WashU’s Skandalaris Center, and won.</li>
       </ul>
       <ul class="tags" aria-label="Related pages">
         <li><a href="stories.html#data">Story: working with data</a></li>
@@ -88,7 +89,7 @@
     </div>
     <div class="project-main">
       <h2>LyftLink: Case Competition Finalist</h2>
-      <p>Management 1000 ends in a case competition for the whole freshman business class. Our case was Lyft, which earns nearly all of its revenue in the United States while Uber grows abroad. Our answer was LyftLink, an entry into Africa through Nairobi that organizes the city's matatu minibus network instead of replacing it, using mobile payments, route optimization and advertising.</p>
+      <p>Management 1000 ends in a case competition for the whole freshman business class. Our case was Lyft, which at the time earned nearly all of its revenue in the United States while Uber was growing abroad. Our answer was LyftLink, an entry into Africa through Nairobi that organizes the city’s matatu minibus network instead of replacing it, using digital payments, route optimization, and advertising.</p>
       <p>We were one of four teams to advance to the finals, where I presented to roughly 500 people, including company executives and the dean.</p>
       <div class="facts">
         <div><b>$114M</b><span>aggregate market capture we targeted in Nairobi</span></div>
@@ -143,7 +144,7 @@
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. Building AI for businesses that have run the same way for decades.</p>
+        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
@@ -156,16 +157,27 @@
       <div>
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="portfolio-index.html">Portfolio index and points</a></li>
+          <li><a href="portfolio-index.html">Portfolio index</a></li>
           <li><a href="brand.html">Brand style guide</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
-    <div class="wrap colophon">
-      <span>&copy; 2026 Sam Quentzel</span>
-      <span>Digital Career Portfolio · MGT 2010 Management Communication</span>
+    <div class="wrap">
+      <div class="colophon">
+        <span>&copy; 2026 Sam Quentzel</span>
+        <span>Digital Career Portfolio</span>
+      </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var here = document.querySelector('.site-nav [aria-current="page"]');
+      var list = document.querySelector('.site-nav ul');
+      if (here && list && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = here.offsetLeft - (list.clientWidth - here.offsetWidth) / 2;
+      }
+    })();
+  </script>
 </body>
 </html>

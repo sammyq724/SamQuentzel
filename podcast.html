@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Podcast | Sam Quentzel</title>
-  <meta name="description" content="Sam Quentzel&#x27;s podcast thought piece on a business and industry trend. Episode in production.">
+  <meta name="description" content="Sam Quentzel&#x27;s podcast thought piece on an industry trend. Episode in production.">
   <meta name="author" content="Sam Quentzel">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Podcast | Sam Quentzel">
-  <meta property="og:description" content="Sam Quentzel&#x27;s podcast thought piece on a business and industry trend. Episode in production.">
+  <meta property="og:description" content="Sam Quentzel&#x27;s podcast thought piece on an industry trend. Episode in production.">
   <meta property="og:image" content="https://sammyq724.github.io/SamQuentzel/assets/img/linkedin-cover.png">
   <meta name="theme-color" content="#14202b">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -24,7 +24,7 @@
         <span class="plate" aria-hidden="true">SQ</span>
         <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
       </a>
-      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>Download resume</a>
+      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download aria-label="Download resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg><span>Download<span class="hide-xs"> resume</span></span></a>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="wrap">
@@ -38,6 +38,7 @@
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="brand.html">Brand Guide</a></li>
+          <li><a href="portfolio-index.html">Index</a></li>
         </ul>
       </div>
     </nav>
@@ -47,7 +48,7 @@
 <div class="wrap page-head">
   <p class="eyebrow">Podcast Thought Piece</p>
   <h1>Podcast</h1>
-  <p class="lead">A recorded thought piece on a business and industry trend, in my own voice.</p>
+  <p class="lead">A recorded thought piece on an industry trend, in my own voice.</p>
 </div>
 
 <section class="wrap" aria-label="Podcast episode" style="padding-bottom: clamp(20px, 4vw, 48px);">
@@ -73,8 +74,8 @@
       </span>
       <div>
         <p class="meta">Episode in production</p>
-        <strong>The episode is being recorded.</strong>
-        <span>When it is published, you will be able to listen to it right here.</span>
+        <strong>Recording in progress</strong>
+        <span>The episode will be posted on this page.</span>
         <div class="wave" aria-hidden="true">
           <i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:100%"></i><i style="height:65%"></i><i style="height:35%"></i><i style="height:75%"></i><i style="height:50%"></i><i style="height:90%"></i><i style="height:40%"></i><i style="height:60%"></i><i style="height:25%"></i><i style="height:70%"></i><i style="height:45%"></i><i style="height:85%"></i><i style="height:55%"></i><i style="height:30%"></i><i style="height:65%"></i><i style="height:40%"></i>
         </div>
@@ -83,11 +84,11 @@
 
     <div class="media-body">
       <h2>Episode details</h2>
-      <p class="pending">The episode title, a short summary and the sources I cite will be posted here with the recording.</p>
+      <p class="pending">The episode title, a short summary, and the sources I cite will be posted here with the recording.</p>
 
       <div class="writeup">
         <h3>In the meantime</h3>
-        <p>My written take on an industry trend is already up: <a href="thought-piece.html">Replacing Workers Isn't Unethical.</a></p>
+        <p>My written take on an industry trend is already up: <a href="thought-piece.html">Replacing Workers Isn’t Unethical.</a></p>
       </div>
     </div>
   </article>
@@ -101,7 +102,7 @@
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. Building AI for businesses that have run the same way for decades.</p>
+        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
@@ -114,16 +115,27 @@
       <div>
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="portfolio-index.html">Portfolio index and points</a></li>
+          <li><a href="portfolio-index.html">Portfolio index</a></li>
           <li><a href="brand.html">Brand style guide</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
-    <div class="wrap colophon">
-      <span>&copy; 2026 Sam Quentzel</span>
-      <span>Digital Career Portfolio · MGT 2010 Management Communication</span>
+    <div class="wrap">
+      <div class="colophon">
+        <span>&copy; 2026 Sam Quentzel</span>
+        <span>Digital Career Portfolio</span>
+      </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var here = document.querySelector('.site-nav [aria-current="page"]');
+      var list = document.querySelector('.site-nav ul');
+      if (here && list && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = here.offsetLeft - (list.clientWidth - here.offsetWidth) / 2;
+      }
+    })();
+  </script>
 </body>
 </html>

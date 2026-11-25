@@ -24,7 +24,7 @@
         <span class="plate" aria-hidden="true">SQ</span>
         <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
       </a>
-      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>Download resume</a>
+      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download aria-label="Download resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg><span>Download<span class="hide-xs"> resume</span></span></a>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="wrap">
@@ -38,6 +38,7 @@
           <li><a href="interviews.html" aria-current="page">Interviews</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="brand.html">Brand Guide</a></li>
+          <li><a href="portfolio-index.html">Index</a></li>
         </ul>
       </div>
     </nav>
@@ -45,9 +46,9 @@
 
   <main id="main">
 <div class="wrap page-head">
-  <p class="eyebrow">Career Artifacts <span class="meta">2 recorded interviews</span></p>
+  <p class="eyebrow">Career Artifacts <span class="meta">2 interviews · In production</span></p>
   <h1>The careers that shaped mine</h1>
-  <p class="lead">My career identity didn't start in a classroom. It started at home. I am interviewing the two adults who most influenced how I think about work, and writing up what each conversation taught me.</p>
+  <p class="lead">The two people who shaped how I think about work are my parents. I am interviewing each of them about their careers and writing up what I learned.</p>
 </div>
 
 <section class="wrap" aria-label="Interviews" style="padding-bottom: clamp(20px, 4vw, 48px);">
@@ -75,8 +76,8 @@
       </span>
       <div>
         <p class="meta">Interview 01 · Recording in production</p>
-        <strong>A conversation with my mother</strong>
-        <span>The recording will be posted here.</span>
+        <strong>Recording in progress</strong>
+        <span>The interview will be posted on this page.</span>
       </div>
     </div>
 
@@ -104,8 +105,8 @@
       </span>
       <div>
         <p class="meta">Interview 02 · Recording in production</p>
-        <strong>A conversation with my father</strong>
-        <span>The recording will be posted here.</span>
+        <strong>Recording in progress</strong>
+        <span>The interview will be posted on this page.</span>
       </div>
     </div>
 
@@ -130,7 +131,7 @@
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. Building AI for businesses that have run the same way for decades.</p>
+        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
@@ -143,16 +144,27 @@
       <div>
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="portfolio-index.html">Portfolio index and points</a></li>
+          <li><a href="portfolio-index.html">Portfolio index</a></li>
           <li><a href="brand.html">Brand style guide</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
-    <div class="wrap colophon">
-      <span>&copy; 2026 Sam Quentzel</span>
-      <span>Digital Career Portfolio · MGT 2010 Management Communication</span>
+    <div class="wrap">
+      <div class="colophon">
+        <span>&copy; 2026 Sam Quentzel</span>
+        <span>Digital Career Portfolio</span>
+      </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var here = document.querySelector('.site-nav [aria-current="page"]');
+      var list = document.querySelector('.site-nav ul');
+      if (here && list && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = here.offsetLeft - (list.clientWidth - here.offsetWidth) / 2;
+      }
+    })();
+  </script>
 </body>
 </html>

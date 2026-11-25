@@ -24,7 +24,7 @@
         <span class="plate" aria-hidden="true">SQ</span>
         <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
       </a>
-      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>Download resume</a>
+      <a class="btn btn-outline" href="assets/docs/Samuel-Quentzel-Resume.pdf" download aria-label="Download resume"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg><span>Download<span class="hide-xs"> resume</span></span></a>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="wrap">
@@ -38,6 +38,7 @@
           <li><a href="interviews.html">Interviews</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="brand.html">Brand Guide</a></li>
+          <li><a href="portfolio-index.html" aria-current="page">Index</a></li>
         </ul>
       </div>
     </nav>
@@ -46,12 +47,12 @@
   <main id="main">
 <div class="wrap page-head">
   <p class="eyebrow">Portfolio Index <span class="meta">MGT 2010 · Management Communication</span></p>
-  <h1>What's in this portfolio</h1>
-  <p class="lead">Every piece I included in my Digital Career Portfolio, what it is worth and where to find it. The pieces add up to 100 points.</p>
+  <h1>What’s in this portfolio</h1>
+  <p class="lead">Every piece I included in my Digital Career Portfolio, what it is worth, and where to find it. The pieces add up to 100 points.</p>
 </div>
 
 <section class="wrap" aria-label="Included pieces and point values" style="padding-bottom: clamp(20px, 4vw, 48px);">
-  <div class="table-wrap">
+  <div class="table-wrap index-table">
     <table>
       <caption class="visually-hidden">Portfolio pieces and point values</caption>
       <thead>
@@ -72,37 +73,37 @@
         </tr>
         <tr>
           <th scope="row">Career Artifact 1</th>
-          <td>Recorded interview with my mother, with a write-up of what I learned.</td>
-          <td><a href="interviews.html#mother">Interviews</a></td>
+          <td>Recorded interview with my mother, with a write-up of what I learned.<small>In production</small></td>
+          <td><a href="interviews.html#mother">Interview 1</a></td>
           <td class="num">10</td>
         </tr>
         <tr>
           <th scope="row">Career Artifact 2</th>
-          <td>Recorded interview with my father, with a write-up of what I learned.</td>
-          <td><a href="interviews.html#father">Interviews</a></td>
+          <td>Recorded interview with my father, with a write-up of what I learned.<small>In production</small></td>
+          <td><a href="interviews.html#father">Interview 2</a></td>
           <td class="num">10</td>
         </tr>
         <tr>
           <th scope="row">Brand Style Guide</th>
-          <td>One page: colors, fonts, icons and brand adjectives, plus a matching LinkedIn cover.</td>
+          <td>One page: colors, fonts, icons, and brand adjectives, plus a matching LinkedIn cover.</td>
           <td><a href="brand.html">Brand Guide</a></td>
           <td class="num">10</td>
         </tr>
         <tr>
           <th scope="row">Core Story Set</th>
-          <td>Four behavioral stories in STAR format: initiative, data, persuasion and presentation.</td>
+          <td>Four behavioral stories in STAR format: initiative, data, persuasion, and presentation.</td>
           <td><a href="stories.html">Stories</a></td>
           <td class="num">15</td>
         </tr>
         <tr>
           <th scope="row">Thought Piece</th>
-          <td>&ldquo;Replacing Workers Isn't Unethical.&rdquo; An opinion on AI and jobs with statistics and APA citations.</td>
+          <td>&ldquo;Replacing Workers Isn’t Unethical.&rdquo; An opinion on AI and jobs with statistics and APA citations.</td>
           <td><a href="thought-piece.html">Thought Piece</a></td>
           <td class="num">15</td>
         </tr>
         <tr>
           <th scope="row">Podcast Thought Piece</th>
-          <td>A published podcast episode on a business and industry trend.</td>
+          <td>A published podcast episode on an industry trend.<small>In production</small></td>
           <td><a href="podcast.html">Podcast</a></td>
           <td class="num">25</td>
         </tr>
@@ -123,7 +124,7 @@
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>Sam Quentzel</strong><small>Finance · Entrepreneurship · AI</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. Building AI for businesses that have run the same way for decades.</p>
+        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
@@ -136,16 +137,27 @@
       <div>
         <h2>Portfolio</h2>
         <ul>
-          <li><a href="portfolio-index.html">Portfolio index and points</a></li>
+          <li><a href="portfolio-index.html">Portfolio index</a></li>
           <li><a href="brand.html">Brand style guide</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
-    <div class="wrap colophon">
-      <span>&copy; 2026 Sam Quentzel</span>
-      <span>Digital Career Portfolio · MGT 2010 Management Communication</span>
+    <div class="wrap">
+      <div class="colophon">
+        <span>&copy; 2026 Sam Quentzel</span>
+        <span>Digital Career Portfolio</span>
+      </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var here = document.querySelector('.site-nav [aria-current="page"]');
+      var list = document.querySelector('.site-nav ul');
+      if (here && list && list.scrollWidth > list.clientWidth) {
+        list.scrollLeft = here.offsetLeft - (list.clientWidth - here.offsetWidth) / 2;
+      }
+    })();
+  </script>
 </body>
 </html>
