@@ -115,7 +115,9 @@ def curl_apostrophes(markup: str) -> str:
 
 def layout(file: str, meta: dict, body: str) -> str:
     title = meta["title"]
-    full_title = f"{title} | {SITE['name']}" if file != "index.html" else f"{SITE['name']} | Digital Career Portfolio"
+    # The welcome page is titled with the name alone, so a shared link shows "Sam Quentzel".
+    full_title = f"{title} | {SITE['name']}" if file != "index.html" else SITE["name"]
+    page_url = SITE["url"] + ("" if file == "index.html" else file)
     desc = html.escape(meta["description"], quote=True)
     current = ' aria-current="page"'
     nav_items = "\n".join(
@@ -133,7 +135,15 @@ def layout(file: str, meta: dict, body: str) -> str:
   <meta property="og:type" content="website">
   <meta property="og:title" content="{html.escape(full_title, quote=True)}">
   <meta property="og:description" content="{desc}">
-  <meta property="og:image" content="{SITE['url']}assets/img/linkedin-cover.png">
+  <meta property="og:site_name" content="{SITE['name']}">
+  <meta property="og:url" content="{page_url}">
+  <meta property="og:image" content="{SITE['url']}assets/img/sam-quentzel-share.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1600">
+  <meta property="og:image:alt" content="Sam Quentzel in a gray suit outside a campus building">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{SITE['url']}assets/img/sam-quentzel-share.jpg">
   <meta name="theme-color" content="#14202b">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
