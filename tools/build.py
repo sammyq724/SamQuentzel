@@ -102,7 +102,7 @@ def version_assets(page: str) -> str:
             return path
         return f"{path}?v={hashlib.sha1(file.read_bytes()).hexdigest()[:10]}"
 
-    return re.sub(r"assets/[A-Za-z0-9_./-]+\.(?:css|png|jpg|webp|svg|pdf|woff2)(?![?\w])", stamp, page)
+    return re.sub(r"assets/[A-Za-z0-9_./-]+\.(?:css|png|jpg|webp|svg|pdf|woff2|m4a|mp3|mp4)(?![?\w])", stamp, page)
 
 
 def curl_apostrophes(markup: str) -> str:

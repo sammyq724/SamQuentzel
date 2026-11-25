@@ -300,9 +300,11 @@ main { display: block; }
 .wave { display: flex; align-items: center; justify-content: center; gap: 4px; height: 34px; margin-top: 16px; opacity: 0.55; }
 .wave i { display: block; width: 4px; border-radius: 2px; background: var(--mist); }
 .media-card audio, .media-card video, .media-card iframe { display: block; width: 100%; border: 0; }
+.slot audio { max-width: 560px; margin-top: 4px; border-radius: 100px; }
 .writeup { margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--line); }
 .writeup h3 { margin-bottom: 10px; }
 .writeup p { max-width: 36rem; margin-inline: auto; }
+.writeup .reflection { max-width: 40rem; text-align: left; font-size: 1.12rem; line-height: 1.68; }
 .pending { color: var(--steel); font-style: italic; }
 
 .caption { margin-top: 12px; font-size: 0.92rem; color: var(--steel); }
