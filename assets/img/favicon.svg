@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><clipPath id="r"><rect width="64" height="64" rx="9"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="64" height="64" fill="#14202b"/>
+    <rect y="54" width="64" height="10" fill="#b5842c"/>
+    <text x="32" y="41" text-anchor="middle" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="30" letter-spacing="0.5" fill="#f7f4ed">SQ</text>
+  </g>
+</svg>

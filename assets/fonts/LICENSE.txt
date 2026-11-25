@@ -1,0 +1,5 @@
+Fonts in this folder are open-source and self-hosted:
+- Archivo (Omnibus-Type) — SIL Open Font License 1.1
+- Source Serif 4 (Adobe) — SIL Open Font License 1.1
+- IBM Plex Mono (IBM) — SIL Open Font License 1.1
+License text: https://openfontlicense.org
