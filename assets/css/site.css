@@ -244,7 +244,7 @@ main { display: block; }
 .section-head p { margin-top: 12px; color: var(--ink-soft); }
 .rule { border: 0; border-top: 1px solid var(--line-strong); margin: 0; }
 
-.prose { max-width: 41rem; margin-inline: auto; }
+.prose { max-width: 50rem; margin-inline: auto; }
 .prose p { font-size: 1.2rem; line-height: 1.7; }
 .prose h2 { margin: 1.6em 0 0.6em; }
 
@@ -267,12 +267,12 @@ main { display: block; }
 
 /* ---------- Essay / article ---------- */
 
-.refs { list-style: none; margin: 0 auto; padding: 0; max-width: 41rem; }
+.refs { list-style: none; margin: 0 auto; padding: 0; max-width: 50rem; }
 .refs li { padding-left: 2em; text-indent: -2em; font-size: 1rem; line-height: 1.55; margin-bottom: 14px; overflow-wrap: anywhere; }
 
 /* ---------- STAR stories ---------- */
 
-.story { max-width: 41rem; margin-inline: auto; padding-block: clamp(36px, 5vw, 60px); border-top: 1px solid var(--line-strong); }
+.story { max-width: 50rem; margin-inline: auto; padding-block: clamp(36px, 5vw, 60px); border-top: 1px solid var(--line-strong); }
 .story:first-of-type { border-top: 0; padding-top: clamp(8px, 2vw, 20px); }
 .story-num { display: block; text-align: center; font-family: var(--font-mono); font-weight: 500; font-size: 0.85rem; letter-spacing: 0.16em; color: var(--brass-deep); margin: 0 0 12px; }
 .story h2 { text-align: center; font-size: clamp(1.45rem, 2.8vw, 1.9rem); margin: 0 auto 28px; max-width: 30rem; }

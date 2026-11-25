@@ -22,7 +22,7 @@ PAGES = Path(__file__).resolve().parent / "pages"
 
 SITE = {
     "name": "Sam Quentzel",
-    "tagline": "Finance · Entrepreneurship · AI",
+    "tagline": "Business + Computer Science · AI",
     "email": "q.sam@wustl.edu",
     "linkedin": "https://www.linkedin.com/in/squentzel724/",
     "resume": "assets/docs/Samuel-Quentzel-Resume.pdf",
@@ -158,7 +158,7 @@ def layout(file: str, meta: dict, body: str) -> str:
           <span class="plate" aria-hidden="true">SQ</span>
           <span class="brand-text"><strong>{SITE['name']}</strong><small>{SITE['tagline']}</small></span>
         </a>
-        <p>Finance and entrepreneurship at WashU Olin. I want to help established businesses modernize with AI.</p>
+        <p>Business and Computer Science at WashU. I want to help established businesses modernize with AI.</p>
       </div>
       <div>
         <h2>Contact</h2>
