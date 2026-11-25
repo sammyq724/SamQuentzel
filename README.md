@@ -25,7 +25,7 @@ A static website for MGT 2010 Management Communication. No frameworks and no bui
 | Podcast Thought Piece | `podcast.html` | 25 |
 | **Total** | | **100** |
 
-`projects.html` is extra, and `portfolio-index.html` shows this same table on the site.
+`portfolio-index.html` shows this same table on the site.
 
 ## Still to add
 
@@ -59,7 +59,7 @@ Then open http://localhost:8000.
 index.html, resume.html, ...   built pages (do not edit by hand; edit tools/pages/ and rebuild)
 assets/css/site.css            all styles and the brand colors
 assets/fonts/                  Archivo, Source Serif 4, IBM Plex Mono (open-source, self-hosted)
-assets/img/                    headshot, resume image, LinkedIn cover, case competition slides
+assets/img/                    headshot, resume image, LinkedIn cover
 assets/docs/                   resume PDF
 assets/media/                  interview and podcast recordings go here
 tools/                         page sources and the build script

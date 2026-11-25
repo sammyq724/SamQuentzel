@@ -26,5 +26,3 @@ The same list of pieces and point values is published on the site: <https://samm
 ## How I reached 100 points
 
 Purpose Essay (15) + Career Artifact 1 (10) + Career Artifact 2 (10) + Brand Style Guide (10) + Core Story Set (15) + Thought Piece (15) + Podcast Thought Piece (25) = **100 points**, plus the required Resume Page.
-
-The site also includes a Projects page (an AI prediction model, the Management 1000 case competition final, and an iOS game). It is extra and carries no points.

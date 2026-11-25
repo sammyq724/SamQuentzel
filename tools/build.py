@@ -37,7 +37,6 @@ NAV = [
     ("thought-piece.html", "Thought Piece"),
     ("podcast.html", "Podcast"),
     ("interviews.html", "Interviews"),
-    ("projects.html", "Projects"),
     ("brand.html", "Brand Guide"),
     ("portfolio-index.html", "Index"),
 ]
@@ -163,14 +162,6 @@ def layout(file: str, meta: dict, body: str) -> str:
           <li><a href="mailto:{SITE['email']}">{SITE['email']}</a></li>
           <li><a href="{SITE['linkedin']}" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="{SITE['resume']}" download>Download resume (PDF)</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Portfolio</h2>
-        <ul>
-          <li><a href="portfolio-index.html">Portfolio index</a></li>
-          <li><a href="brand.html">Brand style guide</a></li>
-          <li><a href="projects.html">Projects</a></li>
         </ul>
       </div>
     </div>
