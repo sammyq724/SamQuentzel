@@ -9,6 +9,7 @@ Usage:  python3 tools/build.py
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
@@ -50,6 +51,9 @@ LIMITS = {
     "story4": (100, 150),
     "thought": (200, 300),
 }
+
+# Changes whenever the stylesheet changes, so browsers never pair new pages with old styles.
+CSS_VERSION = hashlib.sha1((ROOT / "assets/css/site.css").read_bytes()).hexdigest()[:10]
 
 ICON_DOWNLOAD = (
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
@@ -122,7 +126,7 @@ def layout(file: str, meta: dict, body: str) -> str:
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v={CSS_VERSION}">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
