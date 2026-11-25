@@ -343,8 +343,6 @@ main { display: block; }
 .mark .plate.alt { background: var(--paper); color: var(--ink); border: 2px solid var(--ink); }
 .mark svg { width: 46px; height: 46px; color: var(--ink); }
 .mark .icon-box { width: 96px; height: 96px; display: grid; place-items: center; background: var(--card); border: 1px solid var(--line-strong); border-radius: 6px; }
-.cover { border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--ink); }
-.cover img { width: 100%; }
 
 /* ---------- Tables ---------- */
 
