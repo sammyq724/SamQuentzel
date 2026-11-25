@@ -17,7 +17,7 @@ subtitle: "Samuel Quentzel · MGT 2010 Management Communication"
 | Career Artifact 2 | Recorded interview with my father, with a write-up of what I learned | [Interview 2](https://sammyq724.github.io/SamQuentzel/interviews.html#father) | 10 |
 | Brand Style Guide | One page: colors, fonts, icons, and brand adjectives | [Brand Guide](https://sammyq724.github.io/SamQuentzel/brand.html) | 10 |
 | Core Story Set | Four STAR stories: initiative, data, persuasion, and presentation | [Stories](https://sammyq724.github.io/SamQuentzel/stories.html) | 15 |
-| Thought Piece | "Replacing Workers Isn't Unethical Yet." with statistics and APA references | [Thought Piece](https://sammyq724.github.io/SamQuentzel/thought-piece.html) | 15 |
+| Thought Piece | "Replacing Workers Isn't Unethical (Yet)." with statistics and APA references | [Thought Piece](https://sammyq724.github.io/SamQuentzel/thought-piece.html) | 15 |
 | Podcast Thought Piece | Published podcast episode on an industry trend | [Podcast](https://sammyq724.github.io/SamQuentzel/podcast.html) | 25 |
 | **Total** | | | **100** |
 
