@@ -313,9 +313,8 @@ main { display: block; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .adjectives { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; list-style: none; margin: 0; padding: 0; }
-.adjectives li { text-align: center; background: var(--card); border: 1px solid var(--line-strong); border-top: 4px solid var(--brass); border-radius: var(--radius); padding: 18px 18px 20px; }
+.adjectives li { text-align: center; background: var(--card); border: 1px solid var(--line-strong); border-top: 4px solid var(--brass); border-radius: var(--radius); padding: 20px 16px; }
 .adjectives b { display: block; font-family: var(--font-display); font-weight: 750; font-size: 1.18rem; letter-spacing: -0.01em; }
-.adjectives span { display: block; margin-top: 8px; font-size: 0.93rem; line-height: 1.4; color: var(--ink-soft); }
 
 .swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .swatch { border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--card); }
@@ -323,21 +322,12 @@ main { display: block; }
 .swatch div { padding: 14px 16px 16px; text-align: center; }
 .swatch b { display: block; font-family: var(--font-display); font-weight: 750; font-size: 1.08rem; }
 .swatch code { display: block; font-family: var(--font-mono); font-size: 0.86rem; color: var(--ink-soft); margin-top: 2px; }
-.swatch span { display: block; margin-top: 8px; font-size: 0.9rem; line-height: 1.4; color: var(--ink-soft); }
 
-.sub { margin: 34px 0 16px; font-size: 1.05rem; text-align: center; }
-.tones { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-.tones li { justify-content: center; display: grid; grid-template-columns: 44px auto; gap: 12px; align-items: center; font-size: 0.9rem; line-height: 1.35; color: var(--ink-soft); }
-.tones i { display: block; width: 44px; height: 44px; border-radius: var(--radius); border: 1px solid var(--line-strong); }
-.tones b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; color: var(--ink); }
-.tones code { display: block; font-family: var(--font-mono); font-size: 0.8rem; }
 
 .specimens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .specimen { text-align: center; background: var(--card); border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 22px 22px 24px; }
 .specimen .meta { display: block; margin-bottom: 16px; }
-.specimen .name { display: block; font-size: 2.3rem; line-height: 1.05; margin-bottom: 14px; }
-.specimen p { font-size: 0.95rem; line-height: 1.45; color: var(--ink-soft); }
-.specimen .glyphs { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 1.05rem; line-height: 1.4; color: var(--ink); overflow-wrap: anywhere; }
+.specimen .name { display: block; font-size: 2.3rem; line-height: 1.05; }
 
 .marks { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; gap: clamp(18px, 2.4vw, 28px); }
 .mark { display: grid; justify-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-align: center; }
@@ -384,7 +374,6 @@ tfoot td.num { font-family: var(--font-mono); font-weight: 500; color: var(--bra
 @media (max-width: 960px) {
   .adjectives { display: flex; flex-wrap: wrap; }
   .adjectives li { flex: 1 1 220px; }
-  .tones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site-nav::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 40px; background: linear-gradient(to right, rgba(247, 244, 237, 0), var(--paper)); pointer-events: none; }
   .site-nav ul { padding-right: 32px; }
   .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -417,7 +406,6 @@ tfoot td.num { font-family: var(--font-mono); font-weight: 500; color: var(--bra
 
 @media (max-width: 520px) {
   .footer-grid { grid-template-columns: minmax(0, 1fr); }
-  .tones { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 380px) {
